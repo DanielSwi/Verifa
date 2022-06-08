@@ -67,7 +67,7 @@ def dictprint():
     header = next(csvreader)
     dict = {}
     for row in csvreader:
-        dict[row[-1]] = row[0:-1]
+        dict[row[-2]] = row[:]
     file.close()
 
     return dict, header
